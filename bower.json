@@ -1,0 +1,8 @@
+{
+  "name": "material",
+  "version": "1.1.41",
+  "main": [
+    "dist/angular-material.min.js",
+    "dist/angular-material.min.css"
+  ]
+}
