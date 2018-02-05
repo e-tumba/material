@@ -1455,6 +1455,21 @@ md-checkbox {
   .md-chip-input-container md-autocomplete {
     border: none; } }
 
+md-content {
+  display: block;
+  position: relative;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch; }
+  md-content[md-scroll-y] {
+    overflow-y: auto;
+    overflow-x: hidden; }
+  md-content[md-scroll-x] {
+    overflow-x: auto;
+    overflow-y: hidden; }
+  @media print {
+    md-content {
+      overflow: visible !important; } }
+
 /** Styles for mdCalendar. */
 md-calendar {
   font-size: 13px;
@@ -1760,21 +1775,6 @@ md-datepicker[disabled] .md-datepicker-triangle-button {
 .md-datepicker-calendar-pane.md-pane-open .md-calendar {
   -webkit-transform: translateY(0);
           transform: translateY(0); }
-
-md-content {
-  display: block;
-  position: relative;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch; }
-  md-content[md-scroll-y] {
-    overflow-y: auto;
-    overflow-x: hidden; }
-  md-content[md-scroll-x] {
-    overflow-x: auto;
-    overflow-y: hidden; }
-  @media print {
-    md-content {
-      overflow: visible !important; } }
 
 .md-dialog-is-showing {
   max-height: 100%; }
@@ -4593,6 +4593,21 @@ md-slider-container {
   md-slider.md-default-theme .md-track {
     border-bottom: 1px solid #fff; } }
 
+.md-sticky-clone {
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: absolute !important;
+  -webkit-transform: translate3d(-9999px, -9999px, 0);
+          transform: translate3d(-9999px, -9999px, 0); }
+  .md-sticky-clone[sticky-state="active"] {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); }
+    .md-sticky-clone[sticky-state="active"]:not(.md-sticky-no-effect) .md-subheader-inner {
+      -webkit-animation: subheaderStickyHoverIn 0.3s ease-out both;
+              animation: subheaderStickyHoverIn 0.3s ease-out both; }
+
 @-webkit-keyframes subheaderStickyHoverIn {
   0% {
     box-shadow: 0 0 0 0 transparent; }
@@ -4644,21 +4659,6 @@ md-slider-container {
     display: block;
     z-index: 1;
     position: relative; }
-
-.md-sticky-clone {
-  z-index: 2;
-  top: 0;
-  left: 0;
-  right: 0;
-  position: absolute !important;
-  -webkit-transform: translate3d(-9999px, -9999px, 0);
-          transform: translate3d(-9999px, -9999px, 0); }
-  .md-sticky-clone[sticky-state="active"] {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0); }
-    .md-sticky-clone[sticky-state="active"]:not(.md-sticky-no-effect) .md-subheader-inner {
-      -webkit-animation: subheaderStickyHoverIn 0.3s ease-out both;
-              animation: subheaderStickyHoverIn 0.3s ease-out both; }
 
 .md-inline-form md-switch {
   margin-top: 18px;
